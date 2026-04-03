@@ -1,0 +1,188 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --charcoal: #1A1A1A;
+  --gold: #C89B4F;
+  --walnut: #7B4F2E;
+  --offwhite: #F7F4EF;
+  --card-dark: #242424;
+  --card-darker: #1E1E1E;
+  --input-dark: #2E2E2E;
+  --gray-text: #888888;
+  --white: #FFFFFF;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition: all 0.3s ease;
+  --shadow-gold: 0 0 24px rgba(200, 155, 79, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a857;
+  box-shadow: 0 0 12px rgba(200, 155, 79, 0.5);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-color: var(--gold) var(--charcoal);
+  scrollbar-width: thin;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--charcoal);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Mobile-first button styles */
+button {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Improve tap target sizes on mobile */
+@media (max-width: 768px) {
+  button, a[role="button"], input[type="button"], input[type="submit"] {
+    min-height: 48px;
+    padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 24px);
+  }
+}
+
+/* Global animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(200, 155, 79, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(200, 155, 79, 0.6);
+  }
+}
+
+/* Links and interactive elements */
+a {
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4a857;
+}
+
+/* Image animations */
+img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+

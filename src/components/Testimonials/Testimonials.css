@@ -1,0 +1,336 @@
+.testimonials-section {
+  background-color: var(--charcoal);
+  padding: 120px 0 0 0;
+}
+
+.testimonials-container {
+  padding: 0 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.testimonials-h2 {
+  color: var(--white);
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.testimonials-sub {
+  color: var(--gray-text);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonials-swiper-container {
+  padding-bottom: 60px;
+}
+
+.testimonial-card {
+  background-color: var(--card-dark);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--gold);
+  padding: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 300px;
+  cursor: grab;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(200, 155, 79, 0.1);
+}
+
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(200, 155, 79, 0.2) 0%, transparent 70%);
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonial-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card:hover {
+  border-left-color: #d4a857;
+  transform: translateY(-8px);
+  border-color: rgba(200, 155, 79, 0.3);
+  box-shadow: 0 20px 50px rgba(200, 155, 79, 0.4), 0 0 20px rgba(200, 155, 79, 0.15), inset 0 0 20px rgba(200, 155, 79, 0.05);
+  background: linear-gradient(135deg, var(--card-dark) 0%, rgba(200, 155, 79, 0.05) 100%);
+}
+
+.testimonial-card:hover::after {
+  opacity: 1;
+}
+
+.testimonial-card:active {
+  cursor: grabbing;
+  transform: translateY(-4px);
+  scale: 0.99;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 72px;
+  color: var(--gold);
+  opacity: 0.3;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.quote-text {
+  color: var(--white);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  margin-top: 10px;
+  font-style: italic;
+  flex: 1;
+}
+
+.card-divider {
+  height: 1px;
+  background-color: rgba(200, 155, 79, 0.3);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal);
+  font-weight: 800;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.author-company {
+  color: var(--gold);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.card-badge {
+  background-color: var(--gold);
+  color: var(--charcoal);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Swiper Pagination Overrides */
+.swiper-pagination-bullet {
+  background-color: var(--gray-text) !important;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 0.5 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--gold) !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+  opacity: 1 !important;
+}
+
+/* Marquee Section */
+.clients-marquee-container {
+  background-color: #1E1E1E;
+  border-top: 1px solid rgba(200, 155, 79, 0.2);
+  border-bottom: 1px solid rgba(200, 155, 79, 0.2);
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.marquee-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.marquee-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  animation: marquee-scroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.marquee-company {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 60px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.marquee-sep {
+  color: var(--gold);
+  font-size: 10px;
+  margin-right: 60px;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 0 24px;
+  }
+  .testimonials-h2 {
+    font-size: 36px;
+  }
+  .card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .quote-mark {
+    font-size: 48px;
+  }
+  .card-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
+  .testimonials-container {
+    padding: 0 16px;
+  }
+  .testimonials-label {
+    font-size: 11px;
+  }
+  .testimonials-h2 {
+    font-size: 28px;
+  }
+  .testimonials-sub {
+    font-size: 13px;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+  .quote-mark {
+    font-size: 36px;
+  }
+  .quote-text {
+    font-size: 14px;
+  }
+  .author-name {
+    font-size: 13px;
+  }
+  .author-company {
+    font-size: 12px;
+  }
+  .card-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .marquee-company {
+    font-size: 14px;
+    margin-right: 40px;
+  }
+  .marquee-sep {
+    margin-right: 40px;
+  }
+}
