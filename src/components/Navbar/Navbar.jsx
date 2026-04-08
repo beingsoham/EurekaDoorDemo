@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="nav-content">
         <div className="nav-logo">
-          <span className="logo-text">Eureka Doors</span>
+          <img src="/eureka-logo.jpeg" alt="Eureka Doors" className="logo-img" />
         </div>
 
         <div className="nav-links">
